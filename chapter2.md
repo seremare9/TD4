@@ -6,7 +6,7 @@
 
 ### Modelo de las OSI (Open Systems Interconnection)
 
-![Captura de pantalla 2024-08-20 a la(s) 21.55.56.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-20_a_la(s)_21.55.56.png)
+![osi.png](/imagenes/imagenesch2/osi.png)
 
 ### Aplicaciones en red
 
@@ -16,7 +16,7 @@
 - No se requiere el desarrollo de software para dispositivos en el núcleo de la red! Estos dispositivos (routers/switches) no corren aplicaciones de usuario
 - Las apps en los hosts permiten agilizar su desarrollo y adopción.
 
-![Captura de pantalla 2024-08-20 a la(s) 21.54.34.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-20_a_la(s)_21.54.34.png)
+![app.png](/imagenes/imagenesch2/app.png)
 
 ### Arquitectura de aplicaciones
 
@@ -47,7 +47,7 @@
 - Los peers tienen conectividad intermitente; cambian direcciones IP
 - Estructura **descentralizada** → problemas de seguridad, performance y fiabilidad
 
-![Captura de pantalla 2024-08-16 a la(s) 14.33.26.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-16_a_la(s)_14.33.26.png)
+![p2p.png](imagenes/imagenesch2/p2p.png)
 
 ### Comunicación de procesos
 
@@ -66,7 +66,7 @@
 - El proceso emisor despacha mensajes por la puerta. Del otro lado del socket, el protocolo de transporte obtiene el mensaje y lo envia al socket del proceso receptor.
 - Dos sockets involucrados: uno en cada extremo
 
-![Captura de pantalla 2024-08-20 a la(s) 22.56.33.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/6249d9d1-3dd7-40b1-9932-00372389bed4.png)
+![sockets.png](imagenes/imagenesch2/sockets.png)
 
 - Existen tres tipos de sockets:
     - *Datagram sockets*: Se montan sobre el protocolo de transporte **UDP** (no confiable)
@@ -156,7 +156,7 @@ El Internet ofrece dos protocolos de transporte a las aplicaciones: **UDP y TCP*
 - Una página web consta de **objetos** (archivos), que pueden estar almacenados en distintos servidores web
 - Las páginas tienen un archivo HTML base que referencia otros objetos, cada uno direccionable por una URL:
     
-    ![Captura de pantalla 2024-08-21 a la(s) 18.08.02.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-21_a_la(s)_18.08.02.png)
+    ![url.png](imagenes/imagenesch2/url.png)
     
 
 ### HTTP (*HyperText Transfer Protocol)*
@@ -167,7 +167,7 @@ El Internet ofrece dos protocolos de transporte a las aplicaciones: **UDP y TCP*
     - **Cliente**: el navegador que solicita, recibe (vía HTTP) y “muestra” los objetos web
     - **Servidor**: el dispositivo que envía objetos (vía HTTP) como respuesta a las solicitudes recibidas
 
-![Captura de pantalla 2024-08-22 a la(s) 12.52.44.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/0452887a-d3f9-4fef-a81f-68d622b4f310.png)
+![http.png](imagenes/imagenesch2/http.png)
 
 - Utiliza **TCP**
     1. El cliente abre un socket e inicia una conexión TCP al puerto 80 del servidor
@@ -200,7 +200,7 @@ En muchas aplicaciones del Internet, el cliente y el server se comunican por un 
     
     En la PC se accede a [https://www.utdt.edu/td4/home.html](https://www.utdt.edu/td4/home.html) (contiene texto y referencias a 10 imágenes JPG)
     
-    ![Captura de pantalla 2024-08-22 a la(s) 13.47.18.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-22_a_la(s)_13.47.18.png)
+    ![nopersistente.png](imagenes/imagenesch2/nopersistente.png)
     
 
 ### **Tiempo de respuesta en HTTP no persistente**
@@ -225,7 +225,7 @@ En muchas aplicaciones del Internet, el cliente y el server se comunican por un 
 
 </aside>
 
-![Captura de pantalla 2024-08-22 a la(s) 15.00.27.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/efc21f35-649d-410b-a6d1-04d318bcda42.png)
+![rtt.png](imagenes/imagenesch2/rtt.png)
 
 ### HTTP no persistente: problemas
 
@@ -248,11 +248,11 @@ Tipos de mensajes HTTP → Requests y responses
 
 Formato del request HTTP → caracteres ASCII (texto, legible por humanos)
 
-![Ejemplo de mensaje de request](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/10112aa1-b09e-4d42-b0f7-23dbaa9c87c0.png)
+![Ejemplo de mensaje de request](imagenes/imagenesch2/ejemplo_request.png)
 
 Ejemplo de mensaje de request
 
-![Request HTTP: estructura](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-22_a_la(s)_15.33.13.png)
+![Request HTTP: estructura](imagenes/imagenesch2/estructura_request.png)
 
 Request HTTP: estructura
 
@@ -268,11 +268,11 @@ Request HTTP: estructura
 
 ### Responses HTTP
 
-![Ejemplo de mensaje de response](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/b7d63a6c-1693-48f5-bd03-27ddec000433.png)
+![Ejemplo de mensaje de response](imagenes/imagenesch2/ejemplo_response.png)
 
 Ejemplo de mensaje de response
 
-![Response HTTP: estructura](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-22_a_la(s)_17.13.32.png)
+![Response HTTP: estructura](imagenes/imagenesch2/estructura_response.png)
 
 Response HTTP: estructura
 
@@ -297,7 +297,7 @@ Response HTTP: estructura
     4. Base de datos en el sitio web
 - Pueden utilizarse para autorización, carritos de compra, recomendaciones, estado de sesión…
 
-![Captura de pantalla 2024-08-22 a la(s) 18.04.23.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-22_a_la(s)_18.04.23.png)
+![cookies.png](imagenes/imagenesch2/cookies.png)
 
 - Cuando un nuevo usuario ingresa a un sitio que utiliza cookies, el server de este sitio crea un id único y genera una entrada en su base de datos que se indexa con ese id.
 - De ahí en adelante, cuando ese usuario hace una request en ese sitio, su navegador consulta su cookie file, extrae su id para ese sitio y coloca un header cookie que incluye su id en la request HTTP. De esta forma, el server del sitio puede rastrear la actividad del usuario en el sitio.
@@ -319,7 +319,7 @@ Response HTTP: estructura
     - Si el objeto está en la caché: se le devuelve al cliente
     - Si no, la caché solicita el objeto del servidor original, lo cachea (guarda una copia) y lo devuelve al cliente
 
-![Captura de pantalla 2024-08-24 a la(s) 10.58.40.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-24_a_la(s)_10.58.40.png)
+![webcaching.png](imagenes/imagenesch2/webcaching.png)
 
 La caché es **servidor y cliente** al mismo tiempo
 
@@ -344,7 +344,7 @@ La caché es **servidor y cliente** al mismo tiempo
 - Servidor: la respuesta no contiene el objeto si la copia está actualizada:
 *HTTP/1.0 304 Not Modified*
 
-![Captura de pantalla 2024-08-24 a la(s) 11.18.25.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-24_a_la(s)_11.18.25.png)
+![getcondicional.png](imagenes/imagenesch2/getcondicional.png)
 
 ---
 
@@ -360,7 +360,7 @@ La caché es **servidor y cliente** al mismo tiempo
 - De este modo, los objetos pequeños podrían quedar esperando hasta ser transmitidos si hay objetos grandes antes (**head-ofline blocking, HOL**)
 - Las retransmisiones ante pérdidas de paquetes frenan la transmisión de objetos
     
-    ![Captura de pantalla 2024-08-24 a la(s) 11.26.29.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-24_a_la(s)_11.26.29.png)
+    ![http1.png](imagenes/imagenesch2/http1.png)
     
 
 **HTTP/2** → Aumentó la flexibilidad en los servidores al enviar objetos a los clientes:
@@ -370,7 +370,7 @@ La caché es **servidor y cliente** al mismo tiempo
 - **El orden de transmisión de objetos se basa en prioridades definidas por el cliente**
 - Envío de objetos no solicitados al cliente (server push)
     
-    ![Captura de pantalla 2024-08-24 a la(s) 11.27.55.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-08-24_a_la(s)_11.27.55.png)
+    ![http2.png](imagenes/imagenesch2/http2.png)
     
 
 HTTP/2 sobre una misma conexión TCP implica:
@@ -400,7 +400,7 @@ E-mail: tres componentes principales:
 - Utiliza TCP para transferencias confiables
 - Interacciones de tipo comando/respuesta (como HTTP) → Mensajes de 7 bits de caracteres ASCII
 
-![Escenario: envío y lectura de mails](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_09.19.35.png)
+![Escenario: envío y lectura de mails](imagenes/imagenesch2/escenario_smtp.png)
 
 Escenario: envío y lectura de mails
 
@@ -411,7 +411,7 @@ Escenario: envío y lectura de mails
 3. Transferencia de mensaje(s) persistente
 4. Cierre
 
-![Captura de pantalla 2024-09-02 a la(s) 09.27.27.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_09.27.27.png)
+![cierre_smtp.png](imagenes/imagenesch2/cierre_smtp.png.png)
 
 - El cliente utiliza distintos **comandos** (HELO, *MAIL FROM, RCPT TO, DATA, y QUIT)*
 - El server responde a cada comando. Cada respuesta tiene un **código de reply** y una explicación (opcional)
@@ -423,7 +423,7 @@ Escenario: envío y lectura de mails
     - Diferentes a los comandos SMTP MAIL FROM:, RCPT TO, que son parte del handshaking. El header es parte del mensaje en sí.
 - Body: el mensaje en sí mismo; sólo caracteres ASCII permitidos
 
-![Captura de pantalla 2024-09-02 a la(s) 09.46.02.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_09.46.02.png)
+![formato_mensajes.png](imagenes/imagenesch2/formato_mensajes.png)
 
 ### SMTP vs. HTTP
 
@@ -437,7 +437,7 @@ Escenario: envío y lectura de mails
 
 ### Protocolos de acceso al mail
 
-![Captura de pantalla 2024-09-02 a la(s) 09.52.26.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_09.52.26.png)
+![smtpIMG.png](imagenes/imagenesch2/smtpIMG.png)
 
 SMTP permite entregar y almacenar mensajes de e-mail.
 
@@ -470,7 +470,7 @@ Los dispositivos en Internet tienen:
 - Funcionalidad central de Internet: Toda transacción en Internet involucra DNS
 - Descentralización organizacional y física: Millones de organizaciones diferentes son responsables de sus propios registros
 
-![Ejemplo de cómo funciona DNS](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_21.00.08.png)
+![Ejemplo de cómo funciona DNS](imagenes/imagenesch2/ejemplodns.png)
 
 Ejemplo de cómo funciona DNS
 
@@ -504,7 +504,7 @@ bob@yahoo.com --> bob@relay1.west-coast.yahoo.com
 
 ### Jerarquía de servidores DNS
 
-![Captura de pantalla 2024-09-02 a la(s) 21.46.23.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/8a7fe60f-dbf8-4775-ab37-26aa2f6a0283.png)
+![jerarquia.png](imagenes/imagenesch2/jerarquia.png)
 
 - Tres clases de servidores:  **`Root`** , **`top level domain (TLD)`** y  **`autoritativos`**.
 - Los servers Root proporcionan las direcciones IP de los servers TLD. Los servers TLD proporcionan las direcciones IP de los servers autoritativos. Los servers autoritativos almacenan registros DNS para organizaciones específicas.
@@ -518,11 +518,11 @@ bob@yahoo.com --> bob@relay1.west-coast.yahoo.com
 
 **Consultas Iterativas:** El servidor contactado responde con el nombre del próximo servidor a contactar
 
-![Captura de pantalla 2024-09-02 a la(s) 22.11.53.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_22.11.53.png)
+![iterative.png](imagenes/imagenesch2/iterative.png)
 
 **Consultas Recursivas:** El servidor contactado se encarga de resolver la consulta
 
-![Captura de pantalla 2024-09-02 a la(s) 22.12.39.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_22.12.39.png)
+![recursive.png](imagenes/imagenesch2/recursive.png)
 
 ---
 
@@ -565,7 +565,7 @@ Header del mensaje:
     - Respuesta autoritativa
     
 
-![Captura de pantalla 2024-09-02 a la(s) 23.16.00.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-02_a_la(s)_23.16.00.png)
+![mensajesdns.png](imagenes/imagenesch2/mensajesdns.png)
 
 **Nuevos registros en DNS**
 Supongamos que queremos dar de alta el dominio [td4.com](http://td4.com/):
@@ -617,7 +617,7 @@ Más info: pág 135 del libro
 - Cliente-servidor: El tiempo de distribución de un archivo aumenta de forma lineal conforme aumenta el número de peers
 - P2P: Aumentar el número de peers no aumenta el tiempo de distribución
 
-![Captura de pantalla 2024-09-03 a la(s) 11.28.19.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-03_a_la(s)_11.28.19.png)
+![scability.png](imagenes/imagenesch2/scability.png)
 
 ### BitTorrent: distribución de archivos P2P
 
@@ -639,7 +639,7 @@ Cuando un peer se une a un swarm:
 - Los peers pueden cambiar el conjunto de peers con quienes se intercambian chunks
 - Cuando un peer obtiene el archivo completo, puede irse (peer “egoísta”) o permanecer en el torrent (peer “altruista”)
 
-![Captura de pantalla 2024-09-03 a la(s) 11.42.27.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-03_a_la(s)_11.42.27.png)
+![bitTorrent.png](imagenes/imagenesch2/bitTorrent.png)
 
 ### Pedido de chunks
 
@@ -647,7 +647,7 @@ Cuando un peer se une a un swarm:
 - Periódicamente, cada peer solicita a sus vecinos la lista de chunks que ellos poseen
 - A partir de esta info se solicitan los chunks faltantes
 
-![Captura de pantalla 2024-09-04 a la(s) 09.53.01.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/a18e68c3-f64f-44c1-9d34-1812f468d853.png)
+![chunks.png](imagenes/imagenesch2/chunks.png)
 
 - Cómo decido que chunks pedir?
     - **Rarest first** → los más “inusuales” entre sus vecinos primero
@@ -661,7 +661,7 @@ Un peer envía chunks a los cuatro peers que le envían chunks a mayor velocidad
     - “Optimistic unchoking”
     - El peer seleccionado puede subirse al “podio” de los top 4
         
-        ![Captura de pantalla 2024-09-04 a la(s) 10.21.16.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-04_a_la(s)_10.21.16.png)
+        ![tit4tat.png](imagenes/imagenesch2/tit4tat.png)
         
 
 ## 2.6 Video Streaming and Content Distribution Networks
@@ -694,14 +694,14 @@ Un peer envía chunks a los cuatro peers que le envían chunks a mayor velocidad
 
 ### Streaming de video almacenado
 
-![Captura de pantalla 2024-09-04 a la(s) 10.33.58.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-04_a_la(s)_10.33.58.png)
+![streaming.png](imagenes/imagenesch2/streaming.png)
 
 - Los videos son almacenados en servers → los usuarios envian requests a esos servers para verlos *on demand.*
 - Desafíos principales:
     - El ancho de banda del servidor al cliente puede cambiar a lo largo del tiempo (con niveles de congestión cambiantes)
     - La pérdida de paquetes y el delay por congestión pueden demorar la reproducción del video o deteriorar su calidad
     
-    ![Captura de pantalla 2024-09-04 a la(s) 10.34.25.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-04_a_la(s)_10.34.25.png)
+    ![streaming2.png](imagenes/imagenesch2/streaming2.png)
     
 
 **Streaming: desafíos**
@@ -711,7 +711,7 @@ Un peer envía chunks a los cuatro peers que le envían chunks a mayor velocidad
     - Interactividad: el cliente puede pausar, adelantar, rebobinar, etc.
     - Pérdida de paquetes / retransmisiones
         
-        ![El buffering y el delay de reproducción “compensan” el delay de la red](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-04_a_la(s)_10.36.46.png)
+        ![El buffering y el delay de reproducción “compensan” el delay de la red](imagenes/imagenesch2/streaming3.png)
         
         El buffering y el delay de reproducción “compensan” el delay de la red
         
@@ -748,7 +748,7 @@ Cliente
 
 ### Componentes de una CDN
 
-![Captura de pantalla 2024-09-04 a la(s) 10.47.05.png](Chapter%202%20Application%20Layer%20cb9f1b87df1848749f6ae07d59170c48/Captura_de_pantalla_2024-09-04_a_la(s)_10.47.05.png)
+![cdns.png](imagenes/imagenesch2/cdns.png)
 
 ### Distribución de contenido multimedia
 
