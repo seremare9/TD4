@@ -62,13 +62,13 @@
 
 Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs globales deben estar interconectados
 
-![Captura de pantalla 2024-08-08 a la(s) 17.07.35.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/6dbfa562-f4e7-4f2f-948b-8e615412f24a.png)
+![isps.png](imagenes/imagenesch1/isps.png)
 
 ### La estructura de Internet
 
-![Captura de pantalla 2024-08-10 a la(s) 12.37.45.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_12.37.45.png)
+![estructura1.png](imagenes/imagenesch1/estructura1.png)
 
-![Captura de pantalla 2024-08-10 a la(s) 12.21.40.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/402fb063-6cdd-42a1-879b-847323a8c750.png)
+![estructura2.png](imagenes/imagenesch1/estructura2.png.png)
 
 ## 1.2 - The Network Edge
 
@@ -79,7 +79,7 @@ Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs g
 - La red que conecta físicamente a un host con el primer router (”*edge router*”) en una red desde el end system hacia otro end system.
 - **Redes de acceso doméstico: DSL, Cable, FTTH, y 5G Fixed Wireless**
     
-    ![Captura de pantalla 2024-08-10 a la(s) 13.40.13.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_13.40.13.png)
+    ![domestico.png](imagenes/imagenesch1/domestico.png.png)
     
     - **DSL**
         - Típicamente, un hogar obtiene acceso a Internet DSL de la misma compañía telefónica (telco) que brinda su acceso telefónico local por cable. Por ende, cuando se utiliza DSL, el telco de un hogar también es su ISP.
@@ -87,17 +87,17 @@ Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs g
             - Los datos sobre la línea DSL salen hacia Internet
             - La voz se redirige hacia la red telefónica
         
-        ![Captura de pantalla 2024-08-10 a la(s) 13.39.51.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_13.39.51.png)
+        ![dsl.png](imagenes/imagenesch1/dsl.png)
         
     - **Cable** → Multiplexación por División en Frecuencia (FDM): diferentes canales
     transmitidos en diferentes bandas de frecuencia
         
-        ![Captura de pantalla 2024-08-10 a la(s) 13.38.47.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_13.38.47.png)
+        ![cable.png](imagenes/imagenesch1/cable.png.png)
         
     
 - **Redes de acceso institucional/corporativo: Ethernet y WiFi**
     
-    ![Captura de pantalla 2024-08-10 a la(s) 13.44.39.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_13.44.39.png)
+    ![institucional.png](imagenes/imagenesch1/institucional.png.png)
     
     - Universidades, empresas, etc.
     - Mezcla de tecnologías cableadas e inalámbricas conectando switches y routers
@@ -118,7 +118,7 @@ Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs g
 - Las máquinas detrás de las aplicaciones de Internet.
 - Se conectan al Internet e incluyen redes de computadoras complejas que interconectan sus hosts. Estos hosts muestran contenido, almacenan documentos y realizan cómputos.
 
-![image.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/image.png)
+![datacenter.png](imagenes/imagenesch1/datacenter.png.png)
 
 - Usados por **grandes empresas** (ej Google, Amazon, Microsoft) para distintos propósitos
     1. Páginas de e-commerce para usuarios
@@ -180,7 +180,7 @@ Dos tipos de medios:
 
 ### Packet Switching
 
-![Captura de pantalla 2024-08-09 a la(s) 14.05.34.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/7936d2a1-a552-4841-a23b-6be1d621bd5f.png)
+![packetswitching.png](imagenes/imagenesch1/packetswitching.png)
 
 Los hosts intercambian mensajes. Estos mensajes pueden realizar una tarea de control contener data (ej: un e-mail, una imagen JPEG, un archivo MP3), etc.
 
@@ -189,7 +189,7 @@ Cómo funciona:
 - Para enviar un mensaje desde un source host a un host destinatario, el source lo descompone en porciones más chicas: **paquetes de L bits.**
 - Entre el source y el destino, cada paquete viaja mediante enlaces de comunicación y packet switches a una **tasa de transmisión R.**
 
-![Captura de pantalla 2024-08-09 a la(s) 14.08.11.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-09_a_la(s)_14.08.11.png)
+![dtrans.png](imagenes/imagenesch1/dtrans.png)
 
 R depende de la tecnología del enlace. L depende del tamaño del paquete. El tamaño del paquete se define en el protocolo.
 
@@ -215,18 +215,18 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
     Otro caso a considerar: Se envia un paquete de S a D a través de un path con N enlaces con rate R (N-1 routers entre S y D). **El delay total es N * (L/R).**
     
 
-![Captura de pantalla 2024-08-10 a la(s) 15.30.53.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_15.30.53.png)
+![saf.png](imagenes/imagenesch1/saf.png.png)
 
 ### Delay de encolamiento y packet loss
 
-![Captura de pantalla 2024-08-10 a la(s) 17.51.57.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_17.51.57.png)
+![encolamiento.png](imagenes/imagenesch1/encolamiento.png.png)
 
 - Cada packet switch se conecta a múltiples enlaces, toma un paquete que llega a uno de esos enlaces y lo reenvia (forward) a otro enlace. Por cada enlace, el packet switch tiene una cola de outputs, que almacena paquetes que el router está por enviar por ese enlace.
 - El **encolamiento** sucede cuando el trabajo llega más rápido que lo que puede ser atendido. Es decir, si un paquete que llega necesita ser transmitido por un enlace que está ocupado transmitiendo otro paquete, el paquete debe esperar en la cola.
 - El **delay de encolamiento** depende del nivel de congestión en la red.
 - **Si la tasa de arribo al packet switch (en bps) supera a la tasa de transmisión** durante un período de tiempo, se encolarán paquetes esperando a ser transmitidos. Ya que el espacio de la cola es finito, un paquete se **descarta** y se pierde si encuentra los **buffers** completos (***packet loss***). Este paquete pueden (o no) ser retransmitido.
     
-    ![IMG_3690.jpg](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/IMG_3690.jpg)
+    ![encolamiento2.jpg](imagenes/imagenesch1/encolamiento2.jpg.jpg)
     
 - Intensidad del tráfico
     
@@ -235,7 +235,7 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
     - Si los paquetes llegan de a uno periódicamente (es decir, cada L/R segundos llega un nuevo paquete), cada paquete encontrará la cola vacía y no habrá delay de encolamiento.
     - Si los paquetes llegan en ráfagas (periódicamente), el delay de encolamiento promedio puede ser alto.
     
-    ![Captura de pantalla 2024-08-12 a la(s) 13.50.39.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-12_a_la(s)_13.50.39.png)
+    ![graf.png](imagenes/imagenesch1/graf.png.png)
     
     - **Típicamente, el proceso de llegada a la cola es random; las llegadas no siguen ningún patrón y las llegadas de paquetes están separadas por cantidades aleatorias de tiempo.** En este caso, la cantidad La/R no alcanza para analizar el delay de encolamiento.
 
@@ -261,7 +261,7 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
         *Consider what happens when one person wants to send information (voice or facsimile) to another over a telephone network. Before the sender can send the information, the network must establish a connection between the sender and the receiver. This is a bona fide connection for which the switches on the path between the sender and receiver maintain connection state for that connection. This connection is called a circuit. When the network establishes the circuit, it also reserves a constant transmission rate in the network’s links (representing a fraction of each link’s transmission capacity) for the duration of the connection. Since a given transmission rate has been reserved for this sender-to-receiver connection, the sender can transfer the data to the receiver at the guaranteed constant rate.*
         
 
-![*Una red simple de circuit-switch. Consiste de 4 switches y 4 enlaces.*](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-11_a_la(s)_16.42.56.png)
+![*Una red simple de circuit-switch. Consiste de 4 switches y 4 enlaces.*](imagenes/imagenesch1/circuits.png.png)
 
 *Una red simple de circuit-switch. Consiste de 4 switches y 4 enlaces.*
 
@@ -271,7 +271,7 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
     - **Multiplexación por División de Frecuencia (FDM)** → Ancho de banda total dividido en bandas de frecuencias. Menos capacidad, más tiempo.
     - **Multiplexación por División de Tiempo (FDT)** → Tiempo dividido en intervalos. Más capacidad, menos tiempo.
     
-    ![IMG_3689.jpg](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/IMG_3689.jpg)
+    ![circuits2.jpg](imagenes/imagenesch1/circuits2.jpg.jpg)
     
 - Problemas
     - Un circuito permanece inactivo si no está siendo utilizado en una conexión → Desperdicio de recursos
@@ -309,13 +309,13 @@ Durante el viaje a lo largo del path (desde que parte del source hasta que llega
 - **Delay de transmisión** → Cuanto tarda el router en empezar a transmitir un paquete completo. Se calcula → **L/R** (L: longitud del paquete en bits; R: tasa de transmisión en bps). No depende de la distancia entre los routers.
 - **Delay de propagación** → Cuanto tarda el mensaje en llegar de un lugar a otro. Los bits se propagan a la velocidad de propagación del enlace. Se calcula → **D/S** (D: Distancia; S: Velocidad de propagación).
 
-![Delay nodal (delay en un router) = suma de todos los delays](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/IMG_3692.jpg)
+![Delay nodal (delay en un router) = suma de todos los delays](imagenes/imagenesch1/delaynodal.jpg.jpg)
 
 Delay nodal (delay en un router) = suma de todos los delays
 
 ### End-to-end delay
 
-![Suponiendo que hay N-1 routers entre los hosts](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-12_a_la(s)_13.56.49.png)
+![Suponiendo que hay N-1 routers entre los hosts](imagenes/imagenesch1/delayendtoend.png.png)
 
 Suponiendo que hay N-1 routers entre los hosts
 
@@ -325,7 +325,7 @@ Suponiendo que hay N-1 routers entre los hosts
     - **Instantáneo**: En un punto dado en el tiempo. El rate (en bits/s) al que el host destinatario recibe un archivo.
     - **Medio**: F/T bits/s (Siendo F el tamaño del archivo en bits y T la cantidad de segundos que toma al host destino recibir todos los bits). A lo largo de un período de tiempo prolongado.
 
-![Rs: Entre el server y el router ; Rc: Entre el router y el cliente](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/IMG_3691.jpg)
+![Rs: Entre el server y el router ; Rc: Entre el router y el cliente](imagenes/imagenesch1/throughput.jpg)
 
 Rs: Entre el server y el router ; Rc: Entre el router y el cliente
 
@@ -339,7 +339,7 @@ Entonces:
 
 En una red con **N enlaces** entre el server y el cliente, con las tasas de transmisión de los N enlaces siendo R1, R2, …, RN. Siguiendo el mismo análisis, el throughput en este caso es **min{R1, R2, … , RN}** (es decir, la tasa de transmisión del actual bottleneck)**.**
 
-![Captura de pantalla 2024-08-12 a la(s) 14.34.09.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/90bdb4fd-17b4-4db4-97bb-0e5c6cabd73e.png)
+![redNenlaces.png](imagenes/imagenesch1/redNenlaces.png.png)
 
 ### Throughput: ejemplo basado en Internet
 
@@ -348,7 +348,7 @@ En una red con **N enlaces** entre el server y el cliente, con las tasas de tran
 - Throughput por conexión: mín**{Rc,Rs,R/10}**
 - En la práctica, Rc o Rs suelen ser los bottleneck
 
-![Captura de pantalla 2024-08-12 a la(s) 14.40.59.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-12_a_la(s)_14.40.59.png)
+![tp2.png](imagenes/imagenesch1/tp2.png.png)
 
 > **Conclusión → El throughput depende de las tasas de transmisión de los enlaces y del tráfico**
 > 
@@ -365,7 +365,7 @@ En una red con **N enlaces** entre el server y el cliente, con las tasas de tran
     - Realizando ciertas acciones en la capa
     - Utilizando los servicios de la capa inferior
 
-![Stack de protocolos](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-06_a_la(s)_22.04.28.png)
+![Stack de protocolos](imagenes/imagenesch1/stack.png.png)
 
 Stack de protocolos
 
@@ -379,8 +379,8 @@ Stack de protocolos
 
 ### Servicios, capas y encapsulamiento
 
-![Captura de pantalla 2024-08-15 a la(s) 17.32.53.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-15_a_la(s)_17.32.53.png)
+![encapsulamiento.png](imagenes/imagenesch1/encapsulamiento.png)
 
 ### Vista end-to-end
 
-![Captura de pantalla 2024-08-14 a la(s) 13.49.25.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/26ea7499-7730-49fa-82e4-805dea556b80.png)
+![encapsulamiento2.png](imagenes/imagenesch1/encapsulamiento2.png.png)
