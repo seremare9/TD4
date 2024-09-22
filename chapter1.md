@@ -68,7 +68,7 @@ Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs g
 
 ![estructura1.png](imagenes/imagenesch1/estructura1.png)
 
-![estructura2.png](imagenes/imagenesch1/estructura2.png.png)
+![estructura2.png](imagenes/imagenesch1/estructura2.png)
 
 ## 1.2 - The Network Edge
 
@@ -79,7 +79,7 @@ Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs g
 - La red que conecta físicamente a un host con el primer router (”*edge router*”) en una red desde el end system hacia otro end system.
 - **Redes de acceso doméstico: DSL, Cable, FTTH, y 5G Fixed Wireless**
     
-    ![domestico.png](imagenes/imagenesch1/domestico.png.png)
+    ![domestico.png](imagenes/imagenesch1/domestico.png)
     
     - **DSL**
         - Típicamente, un hogar obtiene acceso a Internet DSL de la misma compañía telefónica (telco) que brinda su acceso telefónico local por cable. Por ende, cuando se utiliza DSL, el telco de un hogar también es su ISP.
@@ -92,12 +92,12 @@ Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs g
     - **Cable** → Multiplexación por División en Frecuencia (FDM): diferentes canales
     transmitidos en diferentes bandas de frecuencia
         
-        ![cable.png](imagenes/imagenesch1/cable.png.png)
+        ![cable.png](imagenes/imagenesch1/cable.png)
         
     
 - **Redes de acceso institucional/corporativo: Ethernet y WiFi**
     
-    ![institucional.png](imagenes/imagenesch1/institucional.png.png)
+    ![institucional.png](imagenes/imagenesch1/institucional.png)
     
     - Universidades, empresas, etc.
     - Mezcla de tecnologías cableadas e inalámbricas conectando switches y routers
@@ -118,7 +118,7 @@ Como interconectamos millones de ISPs? → **ISPs globales.** Todos estos ISPs g
 - Las máquinas detrás de las aplicaciones de Internet.
 - Se conectan al Internet e incluyen redes de computadoras complejas que interconectan sus hosts. Estos hosts muestran contenido, almacenan documentos y realizan cómputos.
 
-![datacenter.png](imagenes/imagenesch1/datacenter.png.png)
+![datacenter.png](imagenes/imagenesch1/datacenter.png)
 
 - Usados por **grandes empresas** (ej Google, Amazon, Microsoft) para distintos propósitos
     1. Páginas de e-commerce para usuarios
@@ -215,18 +215,18 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
     Otro caso a considerar: Se envia un paquete de S a D a través de un path con N enlaces con rate R (N-1 routers entre S y D). **El delay total es N * (L/R).**
     
 
-![saf.png](imagenes/imagenesch1/saf.png.png)
+![saf.png](imagenes/imagenesch1/saf.png)
 
 ### Delay de encolamiento y packet loss
 
-![encolamiento.png](imagenes/imagenesch1/encolamiento.png.png)
+![encolamiento.png](imagenes/imagenesch1/encolamiento.png)
 
 - Cada packet switch se conecta a múltiples enlaces, toma un paquete que llega a uno de esos enlaces y lo reenvia (forward) a otro enlace. Por cada enlace, el packet switch tiene una cola de outputs, que almacena paquetes que el router está por enviar por ese enlace.
 - El **encolamiento** sucede cuando el trabajo llega más rápido que lo que puede ser atendido. Es decir, si un paquete que llega necesita ser transmitido por un enlace que está ocupado transmitiendo otro paquete, el paquete debe esperar en la cola.
 - El **delay de encolamiento** depende del nivel de congestión en la red.
 - **Si la tasa de arribo al packet switch (en bps) supera a la tasa de transmisión** durante un período de tiempo, se encolarán paquetes esperando a ser transmitidos. Ya que el espacio de la cola es finito, un paquete se **descarta** y se pierde si encuentra los **buffers** completos (***packet loss***). Este paquete pueden (o no) ser retransmitido.
     
-    ![encolamiento2.jpg](imagenes/imagenesch1/encolamiento2.jpg.jpg)
+    ![encolamiento2.jpg](imagenes/imagenesch1/encolamiento2.jpg)
     
 - Intensidad del tráfico
     
@@ -235,7 +235,7 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
     - Si los paquetes llegan de a uno periódicamente (es decir, cada L/R segundos llega un nuevo paquete), cada paquete encontrará la cola vacía y no habrá delay de encolamiento.
     - Si los paquetes llegan en ráfagas (periódicamente), el delay de encolamiento promedio puede ser alto.
     
-    ![graf.png](imagenes/imagenesch1/graf.png.png)
+    ![graf.png](imagenes/imagenesch1/graf.png)
     
     - **Típicamente, el proceso de llegada a la cola es random; las llegadas no siguen ningún patrón y las llegadas de paquetes están separadas por cantidades aleatorias de tiempo.** En este caso, la cantidad La/R no alcanza para analizar el delay de encolamiento.
 
@@ -261,7 +261,7 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
         *Consider what happens when one person wants to send information (voice or facsimile) to another over a telephone network. Before the sender can send the information, the network must establish a connection between the sender and the receiver. This is a bona fide connection for which the switches on the path between the sender and receiver maintain connection state for that connection. This connection is called a circuit. When the network establishes the circuit, it also reserves a constant transmission rate in the network’s links (representing a fraction of each link’s transmission capacity) for the duration of the connection. Since a given transmission rate has been reserved for this sender-to-receiver connection, the sender can transfer the data to the receiver at the guaranteed constant rate.*
         
 
-![*Una red simple de circuit-switch. Consiste de 4 switches y 4 enlaces.*](imagenes/imagenesch1/circuits.png.png)
+![*Una red simple de circuit-switch. Consiste de 4 switches y 4 enlaces.*](imagenes/imagenesch1/circuits.png)
 
 *Una red simple de circuit-switch. Consiste de 4 switches y 4 enlaces.*
 
@@ -271,7 +271,7 @@ R depende de la tecnología del enlace. L depende del tamaño del paquete. El ta
     - **Multiplexación por División de Frecuencia (FDM)** → Ancho de banda total dividido en bandas de frecuencias. Menos capacidad, más tiempo.
     - **Multiplexación por División de Tiempo (FDT)** → Tiempo dividido en intervalos. Más capacidad, menos tiempo.
     
-    ![circuits2.jpg](imagenes/imagenesch1/circuits2.jpg.jpg)
+    ![circuits2.jpg](imagenes/imagenesch1/circuits2.jpg)
     
 - Problemas
     - Un circuito permanece inactivo si no está siendo utilizado en una conexión → Desperdicio de recursos
@@ -309,13 +309,13 @@ Durante el viaje a lo largo del path (desde que parte del source hasta que llega
 - **Delay de transmisión** → Cuanto tarda el router en empezar a transmitir un paquete completo. Se calcula → **L/R** (L: longitud del paquete en bits; R: tasa de transmisión en bps). No depende de la distancia entre los routers.
 - **Delay de propagación** → Cuanto tarda el mensaje en llegar de un lugar a otro. Los bits se propagan a la velocidad de propagación del enlace. Se calcula → **D/S** (D: Distancia; S: Velocidad de propagación).
 
-![Delay nodal (delay en un router) = suma de todos los delays](imagenes/imagenesch1/delaynodal.jpg.jpg)
+![Delay nodal (delay en un router) = suma de todos los delays](imagenes/imagenesch1/delaynodal.jpg)
 
 Delay nodal (delay en un router) = suma de todos los delays
 
 ### End-to-end delay
 
-![Suponiendo que hay N-1 routers entre los hosts](imagenes/imagenesch1/delayendtoend.png.png)
+![Suponiendo que hay N-1 routers entre los hosts](imagenes/imagenesch1/delayendtoend.png)
 
 Suponiendo que hay N-1 routers entre los hosts
 
@@ -339,7 +339,7 @@ Entonces:
 
 En una red con **N enlaces** entre el server y el cliente, con las tasas de transmisión de los N enlaces siendo R1, R2, …, RN. Siguiendo el mismo análisis, el throughput en este caso es **min{R1, R2, … , RN}** (es decir, la tasa de transmisión del actual bottleneck)**.**
 
-![redNenlaces.png](imagenes/imagenesch1/redNenlaces.png.png)
+![redNenlaces.png](imagenes/imagenesch1/redNenlaces.png)
 
 ### Throughput: ejemplo basado en Internet
 
@@ -348,7 +348,7 @@ En una red con **N enlaces** entre el server y el cliente, con las tasas de tran
 - Throughput por conexión: mín**{Rc,Rs,R/10}**
 - En la práctica, Rc o Rs suelen ser los bottleneck
 
-![tp2.png](imagenes/imagenesch1/tp2.png.png)
+![tp2.png](imagenes/imagenesch1/tp2.png)
 
 > **Conclusión → El throughput depende de las tasas de transmisión de los enlaces y del tráfico**
 > 
@@ -365,7 +365,7 @@ En una red con **N enlaces** entre el server y el cliente, con las tasas de tran
     - Realizando ciertas acciones en la capa
     - Utilizando los servicios de la capa inferior
 
-![Stack de protocolos](imagenes/imagenesch1/stack.png.png)
+![Stack de protocolos](imagenes/imagenesch1/stack.png)
 
 Stack de protocolos
 
@@ -383,4 +383,4 @@ Stack de protocolos
 
 ### Vista end-to-end
 
-![encapsulamiento2.png](imagenes/imagenesch1/encapsulamiento2.png.png)
+![encapsulamiento2.png](imagenes/imagenesch1/encapsulamiento2.png)
