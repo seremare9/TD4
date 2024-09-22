@@ -9,11 +9,11 @@
 - Acciones del nivel de transporte
     - **Emisor**: Divide mensaje de aplicación en **segmentos**; los envía a la capa de red
         
-        ![Captura de pantalla 2024-09-08 a la(s) 22.44.37.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/ebaaf2d0-458f-4799-a279-a7f45d3f2fcd.png)
+        ![emisor1.png](imagenes/imagenesch3/emisor1.png)
         
     - **Receptor**: ensambla mensajes a partir de los segmentos; los pasa a la capa de aplicación
         
-        ![Captura de pantalla 2024-09-08 a la(s) 22.42.06.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/35a2c294-022d-450a-ad4a-a0ce296741b1.png)
+        ![receptor1.png](imagenes/imagenesch3/receptor1.png)
         
 - Los protocolos de transporte “viven” en los end systems → Pueden enviar mensajes de los procesos de aplicación a la capa de red, pero no pueden controlar que sucede en la capa de red
 - Dos protocolos de transporte disponibles para aplicaciones en Internet: **TCP y UDP**
@@ -42,7 +42,7 @@
 - Se recolectan los datos de distintos socket, se encapsulan con un header (utilizado para demultiplexar luego)y se crea el segmento.
 - El segmento es enviado a la capa de red
 
-![Captura de pantalla 2024-09-13 a la(s) 09.27.49.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-13_a_la(s)_09.27.49.png)
+![formato_segmento.png](imagenes/imagenesch3/formato_segmento.png)
 
 ### Demultiplexación sin conexión (UDP)
 
@@ -61,7 +61,7 @@
 > **Los datagramas IP/UDP con el mismo puerto destino (pero distinta dirección IP y/o puerto origen) son redirigidos al mismo socket en el host receptor**
 > 
 
-![Captura de pantalla 2024-09-13 a la(s) 10.58.46.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-13_a_la(s)_10.58.46.png)
+![udp.png](imagenes/imagenesch3/udp.png)
 
 ### Demultiplexación con conexión (TCP)
 
@@ -75,7 +75,7 @@
 > **Ya que el identificador de socket TCP incluye la dirección y el puerto de origen, cada socket está asociado a un cliente distinto.**
 > 
 
-![Tres segmentos dirigidos a la dirección IP B y puerto 80: demultiplexados hacia sockets distintos](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/f0590fea-7dbd-404c-9132-bd8ad21edf60.png)
+![Tres segmentos dirigidos a la dirección IP B y puerto 80: demultiplexados hacia sockets distintos](imagenes/imagenesch3/tcp.png)
 
 Tres segmentos dirigidos a la dirección IP B y puerto 80: demultiplexados hacia sockets distintos
 
@@ -113,9 +113,9 @@ Tres segmentos dirigidos a la dirección IP B y puerto 80: demultiplexados hacia
 
 ### UDP: acciones del nivel de transporte
 
-![Captura de pantalla 2024-09-13 a la(s) 14.52.58.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/8a33fcbe-fbf7-4fbd-a8ed-30af08fdde90.png)
+![emisor_udp.png](imagenes/imagenesch3/emisor_udp.png)
 
-![Captura de pantalla 2024-09-13 a la(s) 14.53.03.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/0931e3d3-a8e8-4261-94de-c83625a26778.png)
+![receptor_udp.png](imagenes/imagenesch3/receptor_udp.png)
 
 ### Header UDP
 
@@ -124,7 +124,7 @@ Tres segmentos dirigidos a la dirección IP B y puerto 80: demultiplexados hacia
 - `Checksum`: Detección de errores
 - Payload: datos de la aplicación
 
-![Captura de pantalla 2024-09-13 a la(s) 14.54.24.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/34aca70b-64a6-4445-9d23-d1bd49a476d3.png)
+![header_udp.png](imagenes/imagenesch3/header_udp.png)
 
 ### Checksum
 
@@ -143,7 +143,7 @@ Objetivo: detectar errores en los bits del segmento transmitido
     - Si no es cero: error detectado!
     - Si es cero: no se detectaron errores
 
-![Ejemplo: suma (complemento a uno) de dos enteros de 16 bits](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-13_a_la(s)_14.51.22.png)
+![Ejemplo: suma (complemento a uno) de dos enteros de 16 bits](imagenes/imagenesch3/checksum.png)
 
 Ejemplo: suma (complemento a uno) de dos enteros de 16 bits
 
@@ -172,7 +172,7 @@ Receptor
 > **rdt_rcv(packet)** recibe un paquete del canal, remueve el encabezado mediante **extract(packet,data)** y lo pasa a la capa del nivel superior mediante la acción **deliver_data(data).**
 > 
 
-![*Reliable data transfer: Service model and service implementation*](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/2a385b82-5446-4b47-b0a7-eabbd955e76d.png)
+![*Reliable data transfer: Service model and service implementation*](imagenes/imagenesch3/rdtKurose.png)
 
 *Reliable data transfer: Service model and service implementation*
 
@@ -185,7 +185,7 @@ Receptor
     - El emisor envía datos al canal subyacente
     - El receptor lee datos del canal
 
-![Captura de pantalla 2024-09-18 a la(s) 14.09.55.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_14.09.55.png)
+![rdt1.png](imagenes/imagenesch3/rdt1.png)
 
 ### rdt2.0: transmisión sobre un canal con errores
 
@@ -196,7 +196,7 @@ Receptor
 > **Stop and wait: el emisor envía un paquete y luego espera la respuesta del receptor**
 > 
 
-![Captura de pantalla 2024-09-18 a la(s) 14.12.50.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/620d4b0f-b5df-434f-865d-5fe8450ba80d.png)
+![rdt2_0.png](imagenes/imagenesch3/rdt2_0.png)
 
 ### rdt2.1: manejo de ACKs/NAKs corruptos
 
@@ -211,16 +211,16 @@ Receptor
 - Debe comprobar si el paquete recibido es un duplicado → el estado indica el número de secuencia del paquete esperado
 - El receptor no puede saber si su último ACK/NAK llegó correctamente al emisor
 
-![Captura de pantalla 2024-09-18 a la(s) 14.16.17.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_14.16.17.png)
+![rdt2_1_emisor.png](imagenes/imagenesch3/rdt2_1_emisor.png)
 
-![Captura de pantalla 2024-09-18 a la(s) 14.16.04.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_14.16.04.png)
+![rdt2_1_receptor.png](imagenes/imagenesch3/rdt2_1_receptor.png)
 
 ### rdt2.2: eliminando los NAKs
 
 - En vez de un NAK, el receptor envía un ACK del último paquete recibido correctamente → El receptor debe indicar explícitamente el número de secuencia del paquete ACKeado
 - Un ACK duplicado en el emisor dispara la misma acción que un NAK: retransmitir el paquete actual
     
-    ![Captura de pantalla 2024-09-18 a la(s) 14.18.26.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_14.18.26.png)
+    ![rdt2_2.png](imagenes/imagenesch3/rdt2_2.png)
     
 
 ### rdt3.0: transmisión sobre un canal con errores y pérdidas
@@ -232,17 +232,17 @@ El emisor espera un ACK durante cierto tiempo
 - La espera se controla con un timer que produce interrupciones cada
 cierto intervalo de tiempo (**timeout**)
 
-![Captura de pantalla 2024-09-18 a la(s) 14.20.16.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_14.20.16.png)
+![rdt3.png](imagenes/imagenesch3/rdt3.png)
 
 ### Escenarios
 
-![Captura de pantalla 2024-09-18 a la(s) 17.59.36.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/e01c4e1d-dd0a-4527-a667-e08f7ae2d5d1.png)
+![escenarios_ab.png](imagenes/imagenesch3/escenarios_ab.png)
 
-![Captura de pantalla 2024-09-18 a la(s) 18.00.10.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/a11c49d3-9782-44ea-b71a-82466c2c020f.png)
+![escenarios_cd.png](imagenes/imagenesch3/escenarios_cd.png)
 
 ### rdt3.0: rendimiento (stop-and-wait)
 
-![Captura de pantalla 2024-09-18 a la(s) 18.30.19.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/f65c8ee7-24b6-4e66-a08d-5467573d9438.png)
+![utilizacion.png](imagenes/imagenesch3/utilizacion.png)
 
 ### rdt3.0: pipelining
 
@@ -252,7 +252,7 @@ Podemos **incrementar el rendimiento** mediante la técnica de **pipelining**
 - Requiere más números de secuencia (ya no puedo usar solo 0 y 1)**. Los números de secuencia respectivos se incrementan ante cada nueva transmisión**
 - Se deben gestionar buffers (en el emisor y/o receptor)
     
-    ![Captura de pantalla 2024-09-18 a la(s) 17.57.47.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_17.57.47.png)
+    ![pipelining.png](imagenes/imagenesch3/pipelining.png)
     
 
 ### Pipelining vía Go-Back-N (GBN)
@@ -261,7 +261,7 @@ El emisor mantiene una **ventana de hasta N paquetes en vuelo** (*sliding-window
 
 - Utiliza un número de secuencia (#SEQ) de k bits en el header
 
-![[Demo](https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/go-back-n-protocol/index.html)](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_18.43.59.png)
+![[Demo](https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/go-back-n-protocol/index.html)](imagenes/imagenesch3/gbn.png)
 
 [Demo](https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/go-back-n-protocol/index.html)
 
@@ -275,13 +275,13 @@ El emisor mantiene una **ventana de hasta N paquetes en vuelo** (*sliding-window
     - Puede generar ACKs duplicados
     - Debe recordar el siguiente #SEQ esperado, rcv_base
     
-    ![Captura de pantalla 2024-09-18 a la(s) 19.09.29.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_19.09.29.png)
+    ![gbn_receptor.png](imagenes/imagenesch3/gbn_receptor.png)
     
 - Al recibir un paquete fuera de orden,
     - Es posible almacenarlo o descartarlo (decisión de implementación)
     - **Se reenvía ACK para el paquete con el #SEQ más alto recibido**
 
-![GBN: Ejemplo](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/2ee699f2-22a1-456e-8440-43997340f470.png)
+![GBN: Ejemplo](imagenes/imagenesch3/gbn_ej.png)
 
 GBN: Ejemplo
 
@@ -310,7 +310,7 @@ GBN: Ejemplo
 - Paquete n en [rcv_base-N,rcv_base-1]: Enviar ACK(n)
 - En cualquier otro caso: Ignorar y descartar el paquete R
 
-![SR: Ejemplo](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-18_a_la(s)_19.17.33.png)
+![SR: Ejemplo](imagenes/imagenesch3/sr_ej.png)
 
 SR: Ejemplo
 
@@ -360,11 +360,11 @@ Luego de establecer la conexión, los procesos comienzan a enviarse data
     - Tamaño del segmento delimitado por el MSS → Su datagrama debe ser menor o igual a la longitud del mayor frame de la capa de enlace que puede ser enviado por el host  **
 - En la capa de red, los segmentos son encapsulados en **datagramas**, y son enviados a la red
 
-![Captura de pantalla 2024-09-19 a la(s) 09.58.08.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-19_a_la(s)_09.58.08.png)
+![sockets_tcp.png](imagenes/imagenesch3/sockets_tcp.png)
 
 ### Estructura del segmento TCP
 
-![Captura de pantalla 2024-09-19 a la(s) 10.05.58.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/e743fc89-0a18-49a5-a43b-366cf0af8c82.png)
+![segmento_tcp.png](imagenes/imagenesch3/segmento_tcp.png)
 
 ### Números de secuencia y ACKs
 
@@ -375,9 +375,9 @@ Ejemplo: Archivo de 500,000 bytes*,* MSS = 1000 bytes → 500 seg
 - **Número de secuencia (#SEQ):** Índice en el stream de bytes del **primer byte en el payload**.
 - **Número de ACK**: **Número de secuencia del siguiente byte esperado por el otro interlocutor**. ACK acumulativo
 
-![Clase 10 - Nivel de Transporte (Parte 4).jpeg](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/247a2610-8b14-4104-9d1a-86ed32c3d4a3.png)
+![imagenes/imagenesch3/seqs_y_acks1.png](imagenes/imagenesch3/seqs_y_acks1.png)
 
-![Captura de pantalla 2024-09-19 a la(s) 10.56.15.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-19_a_la(s)_10.56.15.png)
+![imagenes/imagenesch3/seqs_y_acks2.png](imagenes/imagenesch3/seqs_y_acks2.png)
 
 ### Timeout y RTT en TCP
 
@@ -388,7 +388,7 @@ El timeout debe ser mayor que el RTT → El RTT es variable, TCP hace una estima
 
 SampleRRT: Tiempo transcurrido entre la transmisión de un segmento y la recepción de su ACK (ignorando retransmisiones)
 
-![IMG_3820.jpg](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/IMG_3820.jpg)
+![IMG_3820.jpg](imagenes/imagenesch3/IMG_3820.jpg)
 
 El timeout (RTO) se calcula como el RTT estimado + un márgen de seguridad (el desvío entre el RTT estimado y la muestra)
 
@@ -402,7 +402,7 @@ En general,  α = 0.125 y  β = 0.25
 
 ### Emisor TCP (simplificado)
 
-![Captura de pantalla 2024-09-19 a la(s) 13.23.01.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/a5ed9369-8de6-400f-8b8b-6d15ff6f5531.png)
+![emisor_tcp.png](imagenes/imagenesch3/emisor_tcp.png)
 
 | Evento | Acciones |
 | --- | --- |
@@ -424,11 +424,11 @@ En general,  α = 0.125 y  β = 0.25
 
 ### Retransmisiones: 3 escenarios de ejemplo
 
-![Captura de pantalla 2024-09-19 a la(s) 14.56.40.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-19_a_la(s)_14.56.40.png)
+![retransmisiones.png](imagenes/imagenesch3/retransmisiones.png)
 
 ### TCP Fast Retransmit
 
-> Si el emisor recibe **tres ACKs extra para los mismos datos**, **se reenvía el segmento sin ACK con el #SEQ más bajo** (probablemente se haya perdido, por lo que no se espera al RTO
+> Si el emisor recibe **tres ACKs extra para los mismos datos**, **se reenvía el segmento sin ACK con el #SEQ más bajo** (probablemente se haya perdido, por lo que no se espera al RTO)
 > 
 
 La recepción de tres ACKs
@@ -439,7 +439,7 @@ probable que esto se deba a una
 pérdida, por lo que activa una
 retransmisión de inmediato
 
-![Captura de pantalla 2024-09-19 a la(s) 14.57.33.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-19_a_la(s)_14.57.33.png)
+![fast.png](imagenes/imagenesch3/fast.png)
 
 ---
 
@@ -454,11 +454,11 @@ Cómo funciona:
 - El receptor anuncia **espacio disponible en los buffers** en el campo **`rwnd`** del header TCP
     - El tamaño del buffer (`RcvBuffer`) puede definirse vía opciones del socket (suele ser 4096 bytes por defecto). Muchos SOs auto-ajustan el RcvBuffer
 
-![Captura de pantalla 2024-09-19 a la(s) 15.03.54.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/971d3186-60a3-4baa-8348-e93026d0aed2.png)
+![buffering.png](imagenes/imagenesch3/buffering.png)
 
 - **El emisor limita la cantidad de datos sin ACK (“en vuelo”) de acuerdo al valor recibido de rwnd → Garantiza que el buffer del receptor no se saturará ✅**
     
-    ![Captura de pantalla 2024-09-19 a la(s) 15.05.22.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-19_a_la(s)_15.05.22.png)
+    ![rwnd.png](imagenes/imagenesch3/rwnd.png)
     
 
 <aside>
@@ -473,7 +473,7 @@ Ventana efectiva = `rwnd - (LastByteSent - LastByteAcked)`
 
 [Bibliografía util](https://book.systemsapproach.org/e2e/tcp.html) (esto no está en el libro de Kurose)
 
-![Captura de pantalla 2024-09-19 a la(s) 15.07.07.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/6d811a41-7e45-4ca9-8e32-5c4143107ed7.png)
+![conexion.png](imagenes/imagenesch3/conexion.png)
 
 Handshake: 
 
@@ -482,7 +482,7 @@ Handshake:
 
 **TCP realiza un handshaking de tres pasos → 3-way handshake**
 
-![Captura de pantalla 2024-09-19 a la(s) 15.22.29.png](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/Captura_de_pantalla_2024-09-19_a_la(s)_15.22.29.png)
+![handshake.png](imagenes/imagenesch3/handshake.png)
 
 1. El cliente (quien inicia la conexión) envía un segmento al servidor con un #SEQ (`Flags` = `SYN`, `Seq = x`). Pasa del estado **CLOSED** a **SYN_SENT**.
 2. El server está en **LISTEN**. Recibe el segmento y pasa al estado **SYN_RCVD**. Responde con un segmento que ACKea el #SEQ del cliente (`Flags = ACK, Ack = x + 1`) y declara su propio #SEQ(`Flags = SYN, Seq = y`). Por ende, en este mensaje se prenden las flags  `SYN` y `ACK` .
@@ -502,7 +502,7 @@ Handshake:
 - **Cierre simultáneo:** Ambos cierran al mismo tiempo
 **ESTABLISHED → FIN_WAIT_1 → CLOSING → TIME_WAIT → CLOSED**
 
-![FSM de apertura y cierre de conexión. Todo lo que sucede mientras la conexión está abierta está “oculto” en ESTABLISHED](Chapter%203%20Transport%20Layer%203b0968c77ae4492c9736bd2248fc0d3a/1f72de29-aec9-46fa-91af-431de1e97734.png)
+![FSM de apertura y cierre de conexión. Todo lo que sucede mientras la conexión está abierta está “oculto” en ESTABLISHED](imagenes/imagenesch3/diagrama_fsm.png)
 
 FSM de apertura y cierre de conexión. Todo lo que sucede mientras la conexión está abierta está “oculto” en ESTABLISHED
 
