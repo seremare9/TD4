@@ -21,7 +21,7 @@
     - **Transmission Control Protocol (TCP)**: Garantiza la transmisión confiable y ordenada de datos entre dos dispositivos en una red.
     - **Internet Protocol (IP):** Especifica el formato de los paquetes que se envían y reciben entre routers y end systems.
     
-    ![Captura de pantalla 2024-08-10 a la(s) 12.20.16.png](Chapter%201%20Computer%20Networks%20and%20the%20Internet%202f86e638015b4099a71ac69a02ce6b3c/Captura_de_pantalla_2024-08-10_a_la(s)_12.20.16.png)
+    ![protocolo.png](imagenes/imagenesch1/protocolo.png)
     
 
 ### **Hosts / end systems**
